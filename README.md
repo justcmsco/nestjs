@@ -16,7 +16,7 @@ A simple, type-safe integration for [JustCMS](https://justcms.co) in your NestJS
    Make sure you have the required packages installed:
 
    ```bash
-   npm install @nestjs/axios @nestjs/config rxjs
+   npm install @nestjs/axios @nestjs/config
    ```
 
 2. **Add the Integration Files:**
