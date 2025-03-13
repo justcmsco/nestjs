@@ -138,3 +138,20 @@ export interface PageFilters {
     slug: string;
   };
 }
+
+/**
+ * Layouts
+ */
+export interface LayoutItem {
+  label: string;
+  description: string;
+  uid: string;
+  type: 'text' | 'html' | 'boolean' | 'svg';
+  value: string | boolean;
+}
+
+export interface Layout {
+  id: string;
+  name: string;
+  items: LayoutItem[];
+}

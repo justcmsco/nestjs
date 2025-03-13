@@ -10,6 +10,7 @@ import {
   PageFilters,
   Image,
   ImageVariant,
+  Layout,
 } from './interfaces';
 
 export interface JustCmsModuleOptions {
@@ -125,6 +126,23 @@ export class JustCmsService {
    */
   async getMenuById(id: string): Promise<Menu> {
     return this.get<Menu>(`menus/${id}`);
+  }
+
+  /**
+   * Retrieves a single layout by its ID.
+   * @param id The layout ID.
+   */
+  async getLayoutById(id: string): Promise<Layout> {
+    return this.get<Layout>(`layouts/${id}`);
+  }
+
+  /**
+   * Retrieves multiple layouts by their IDs.
+   * @param ids Array of layout IDs.
+   */
+  async getLayoutsByIds(ids: string[]): Promise<Layout[]> {
+    const idsString = ids.join(';');
+    return this.get<Layout[]>(`layouts/${idsString}`);
   }
 
   // Utility Functions

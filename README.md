@@ -117,6 +117,18 @@ const page = await justCmsService.getPageBySlug('about-us');
 const menu = await justCmsService.getMenuById('main-menu');
 ```
 
+- **getLayoutById(id: string):** Fetches a single layout by its ID, including its items and metadata.
+
+```ts
+const layout = await justCmsService.getLayoutById('footer');
+```
+
+- **getLayoutsByIds(ids: string[]):** Fetches multiple layouts at once by specifying their IDs.
+
+```ts
+const layouts = await justCmsService.getLayoutsByIds(['footer', 'header']);
+```
+
 ### Utility Functions
 
 - **isBlockHasStyle(block: ContentBlock, style: string):** Checks if a content block has a specific style (case-insensitive).
@@ -151,5 +163,7 @@ The service wraps the following JustCMS API endpoints:
 - **Get Pages:** Retrieve pages with optional filtering (by category slug) and pagination.
 - **Get Page by Slug:** Retrieve detailed information about a specific page.
 - **Get Menu by ID:** Retrieve a menu and its items by its unique identifier.
+- **Get Layout by ID:** Retrieve detailed information about a specific layout, including its items and metadata.
+- **Get Layouts by IDs:** Retrieve multiple layouts at once by specifying their IDs.
 
 For more details on each endpoint, refer to the [JustCMS Public API Documentation](https://justcms.co/api).
